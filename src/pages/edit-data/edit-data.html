@@ -1,0 +1,39 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Class List</ion-title>
+  </ion-navbar>
+ 
+ </ion-header>
+ 
+ <ion-content padding class="main">
+  <h2>Update Class List</h2>
+  <form (ngSubmit)="updateData()">
+    <ion-item class="text">
+      <ion-label class="label">Firstname</ion-label>
+      <ion-input type="text" placeholder="Firstname" [(ngModel)]="data.Firstname" name="Firstname" required="" ></ion-input>
+    </ion-item>
+    <ion-item class="text">
+      <ion-label>Surname</ion-label>
+      <ion-input type="text" placeholder="Surname" [(ngModel)]="data.Surname" name="Surname" required="" ></ion-input>
+    </ion-item>
+    <ion-item class="text">
+      <ion-label>Student Number</ion-label>
+      <ion-input type="number" placeholder="Student" [(ngModel)]="data.Student" name="Student" required="" ></ion-input>
+    </ion-item>
+    <ion-item class="text">
+      <ion-label>Gender</ion-label>
+      <ion-select [(ngModel)]="data.type" name="type" required="">
+        <ion-option value="Male">Male</ion-option>
+        <ion-option value="Female">Female</ion-option>
+      </ion-select>
+    </ion-item>
+    <ion-item class="text">
+      <ion-label>Address</ion-label>
+      <ion-input type="text" placeholder="Address" [(ngModel)]="data.Address" name="Address" required="" ></ion-input>
+    </ion-item>
+ 
+    <ion-input type="hidden" [(ngModel)]="data.rowid" name="rowid"></ion-input>
+    <button ion-button  class="btn" type="submit" block>Update Data</button>
+  </form>
+ </ion-content>
